@@ -7,10 +7,10 @@ from django.db import models
 #-image
 
 class Blog(models.Model):
-    title = models.CharField(max_length=100)
-    pub_date = models.DateField(auto_now=True)
-    body = models.CharField(max_length=1000)
-    image = models.ImageField(upload_to='imgs/', height_field=200)
+    title = models.CharField(max_length=100) #maximum length for CharField is 255
+    pub_date = models.DateTimeField()
+    body = models.TextField(max_length=1000)
+    image = models.ImageField(upload_to='imgs/')
 
 #add the blog app to the settings
 
