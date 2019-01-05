@@ -1,6 +1,8 @@
+<!-- This page is the homepage and lists all the jobs I have worked -->
 
 <!doctype html>
 <html lang="en">
+{% load staticfiles %} <!-- has to be added before using any static files -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,15 +32,16 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Jessica Dai</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Jessica Dai</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#">Resume</a>
-      <a class="nav-item nav-link" href="#">LinkedIn</a>
-      <a class="nav-item nav-link" href="#">GitHub</a>
+      <a class="nav-item nav-link" href="{% static 'Jessica Dai resume.pdf' %}">Resume</a>
+      <a class="nav-item nav-link" href="https://www.linkedin.com/in/jess-111/">LinkedIn</a>
+      <a class="nav-item nav-link" href="https://github.com/DDaiJ">GitHub</a>
+      <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
     </div>
   </div>
 </nav>
@@ -54,7 +57,8 @@
           <p>
         </div>
       </div>
-        <a href="mailto:daij7@uw.edu" class="btn btn-info my-2">Email Me</a>
+        <a href="mailto:daij7@uw.edu" class="btn btn-info my-2">Email Me</a><br/>
+        <img class="img-fluid mt-4" width="500" src="{% static 'huskycorgi.png' %}" />
     </div>
   </section>
 
